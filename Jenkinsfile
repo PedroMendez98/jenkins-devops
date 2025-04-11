@@ -14,7 +14,7 @@ git --version'''
         withCredentials(bindings: [
                       string(credentialsId: 'token-kubernete', variable: 'api_token')
                       ]) {
-            sh 'kubectl --token $api_token --server https://192.168.49.2:8443 --insecure-skip-tls-verify=true apply -f deployment-billing-app-back-jenkins.yaml '
+            sh 'kubectl --token $api_token --server https://172.25.80.115:8443 --insecure-skip-tls-verify=true apply -f deployment-billing-app-back-jenkins.yaml '
           }
 
         }
